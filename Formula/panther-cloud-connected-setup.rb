@@ -3,7 +3,7 @@ class PantherCloudConnectedSetup < Formula
   homepage "https://github.com/panther-labs/panther-cli"
   # Specify the version of the release. This will be used in the binary URLs.
   # You will update this and the sha256 checksums for each new release.
-  version "0.0.18"
+  version "0.0.19"
   license "Apache-2.0"
 
   # For HEAD installs, we build from source.
@@ -24,22 +24,22 @@ class PantherCloudConnectedSetup < Formula
   on_macos do
     on_intel do # x86_64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Darwin_x86_64.tar.gz"
-      sha256 "d194b4edab60cf0e880090ee0c31b4840d334135b0a4ad693d4212bedc1cb83d"
+      sha256 "9b7dbaa06d42fa129d9e67f782a7dfac2ca3c734981ee9d33de0bdb8e6a4454c"
     end
     on_arm do # arm64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Darwin_arm64.tar.gz"
-      sha256 "a4ec8075667cb9918dcb9f6877eee8a933cc07b440b8ebd0d8832b98292a7fa9"
+      sha256 "aa74dc03cdcc5a0a2b594146956a3327b9490443335c8541e778e5bd815654f8"
     end
   end
 
   on_linux do
     on_intel do # x86_64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Linux_x86_64.tar.gz"
-      sha256 "f7c062d9b66f65e7d639aee1b14bffcb5a09888e267a06e8ddd913c9ffbf6eb9"
+      sha256 "9a9e2b0504f4dbe628d8889b8348705ee96c50ff25ebd8618dcb1f5077886681"
     end
     on_arm do # arm64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Linux_arm64.tar.gz"
-      sha256 "46facb33f5d1febc7dd14d633d12b8368311e8757851a534db9b18c61d972987"
+      sha256 "ebfcff1278a52920e216ef2b77412a8469ab1917557659a7e326fe0439b97198"
     end
   end
 
