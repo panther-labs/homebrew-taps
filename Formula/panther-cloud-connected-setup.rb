@@ -3,7 +3,7 @@ class PantherCloudConnectedSetup < Formula
   homepage "https://github.com/panther-labs/panther-cli"
   # Specify the version of the release. This will be used in the binary URLs.
   # You will update this and the sha256 checksums for each new release.
-  version "0.0.21"
+  version "0.0.22"
   license "Apache-2.0"
 
   # For HEAD installs, we build from source.
