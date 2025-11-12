@@ -1,5 +1,5 @@
 class PantherCloudConnectedSetup < Formula
-  # Platform-specific checksums for easy programmatic updates
+  # Used for programmatic updates (see update-formula.sh)
   CHECKSUMS = {
     darwin_x86_64: "632e08e3fd6f6815ccca31df8aff80c4b43f0bba3220609ffd8a564342a47dfb",
     darwin_arm64: "6d0085f2de66ec67f0d2e531901441e4b7d361a721c9680f6aac887bac552ede",
