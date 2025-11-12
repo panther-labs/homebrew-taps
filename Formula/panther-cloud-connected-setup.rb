@@ -1,9 +1,17 @@
 class PantherCloudConnectedSetup < Formula
+  # Platform-specific checksums for easy programmatic updates
+  CHECKSUMS = {
+    darwin_x86_64: "632e08e3fd6f6815ccca31df8aff80c4b43f0bba3220609ffd8a564342a47dfb",
+    darwin_arm64: "6d0085f2de66ec67f0d2e531901441e4b7d361a721c9680f6aac887bac552ede",
+    linux_x86_64: "ffa70b5ef1eac7350d818e275581cf7ca31e5e46e7ec72ee2f43168270a25d2a",
+    linux_arm64: "aa0714c0ad86192501ada7774a454572a2ca71666f09c273284c4dc76fe803e6"
+  }.freeze
+
   desc "Tools for Panther deployments"
   homepage "https://github.com/panther-labs/panther-cli"
   # Specify the version of the release. This will be used in the binary URLs.
   # You will update this and the sha256 checksums for each new release.
-  version "0.0.28"
+  version "0.0.29"
   license "Apache-2.0"
 
   # For HEAD installs, we build from source.
@@ -24,22 +32,22 @@ class PantherCloudConnectedSetup < Formula
   on_macos do
     on_intel do # x86_64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Darwin_x86_64.tar.gz"
-      sha256 "9ec32f7ad7632675229ffbf42999879bd7ed5d10d8520527c2d7f38cb4902501"
+      sha256 CHECKSUMS[:darwin_x86_64]
     end
     on_arm do # arm64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Darwin_arm64.tar.gz"
-      sha256 "e6960c9cb038f8d26d3c67f484237eecbda6b9fabcbeca8bfc016594bc5cfd9c"
+      sha256 CHECKSUMS[:darwin_arm64]
     end
   end
 
   on_linux do
     on_intel do # x86_64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Linux_x86_64.tar.gz"
-      sha256 "056899b1077f4e9c90b17f673c0e8cc62f0840d719fd3bfe30bcbd95944a7770"
+      sha256 CHECKSUMS[:linux_x86_64]
     end
     on_arm do # arm64
       url "https://github.com/panther-labs/panther-cli/releases/download/v#{version}/panther-cli_Linux_arm64.tar.gz"
-      sha256 "b5530b361aa2123b9dac9f62579760c420358476dcfdd5b33e3441d80293d432"
+      sha256 CHECKSUMS[:linux_arm64]
     end
   end
 
