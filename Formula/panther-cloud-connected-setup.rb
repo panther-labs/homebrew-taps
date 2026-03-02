@@ -1,17 +1,17 @@
 class PantherCloudConnectedSetup < Formula
   # Used for programmatic updates (see update-formula.sh)
   CHECKSUMS = {
-    darwin_x86_64: "c7611fa7099af41d8fa809313b5c14c0e4c417506c843ac5b9e61252872a3afe",
-    darwin_arm64: "1f2ba3393ca23ee6e34979711f9d2b3b1a584bfde60d58e3479129989773e3e8",
-    linux_x86_64: "3ab3a05870f4040d705ee0bc75b4c750f7d0002fbece12b6bf259554cc8e01f8",
-    linux_arm64: "e6dad0a70513fd90e4e69645db930483cf7ce77d904e46dec423a58ba8e615e9"
+    darwin_x86_64: "af5ff303290de46331788c6f9c874b9e7c755bb5a92453c48711ddd1ca29f349",
+    darwin_arm64: "82d8cf418615747bb77de3e77a02b31e25823c234e003f3fae4f25c5409f921c",
+    linux_x86_64: "605a88d694562fc3fe132982a11ecbfd22a99e627297c845c36a135f166022a7",
+    linux_arm64: "fae081af7b924bf94f54bba797009db5fee8627cc16b304ff82c9b56cf8b942c"
   }.freeze
 
   desc "Tools for Panther deployments"
   homepage "https://github.com/panther-labs/panther-cli"
   # Specify the version of the release. This will be used in the binary URLs.
   # You will update this and the sha256 checksums for each new release.
-  version "0.0.34"
+  version "0.0.39"
   license "Apache-2.0"
 
   # For HEAD installs, we build from source.
